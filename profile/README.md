@@ -54,7 +54,7 @@ bun run dev
 
 ## 🏗 Status
 
-**v0.7.8** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
+**v0.7.9** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
 closed. 31 packages, 67 smoke tests, 210+ unit tests.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
