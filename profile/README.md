@@ -46,7 +46,7 @@ bun run dev
 | REPL with `.services` / `.routes` / `.modules` | ✅ v0.7.4 |
 | OpenAPI 3.1 + Scalar UI | ✅ v0.4 |
 | Prometheus metrics / OpenTelemetry tracing | ✅ v0.4 |
-| Inertia.js v3 (React / Vue) adapter | ✅ v0.2 |
+| Inertia.js v3 (React / Vue) adapter + SSR scaffold | ✅ v0.8.4 |
 
 ## 📚 Docs
 
@@ -57,7 +57,7 @@ bun run dev
 
 ## 🏗 Status
 
-**v0.8.3** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
+**v0.8.4** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
 closed. 32 packages, 69 smoke tests, 314+ unit tests.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
