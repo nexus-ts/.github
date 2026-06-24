@@ -1,6 +1,6 @@
 # NexusTS
 
-**Bun-native fullstack framework** — 31 modular packages under `@nexusts/*`.
+**Bun-native fullstack framework** — 32 modular packages under `@nexusts/*`.
 Ship only what you import. Zero overhead for what you don't.
 
 ---
@@ -23,10 +23,11 @@ bun run dev
 @nexusts/auth      → better-auth integration
 @nexusts/logger    → Pino-backed structured logging
 @nexusts/graphql   → SDL-first + code-first (`autoSchema: true`)
-@nexusts/resilience → Retry + Circuit Breaker + Bulkhead
+@nexusts/resilience → Retry + Circuit Breaker + Bulkhead + HTTP admin
+@nexusts/feature-flag → Canary deployments & A/B testing
 @nexusts/cache     → Application cache (memory / Drizzle / Redis)
 @nexusts/schedule  → Cron / Interval / Timeout (in-tree parser, zero deps)
-... and 22 more →
+... and 23 more →
 ```
 
 ## ✨ Key features
@@ -38,8 +39,10 @@ bun run dev
 | Lifecycle Hooks (`OnModuleInit`, etc.) | ✅ v0.7.3 |
 | Request-scoped DI | ✅ v0.4 |
 | GraphQL (SDL + code-first) | ✅ v0.7.7 |
-| WebSocket / SSE / gRPC | ✅ v0.5 |
-| Circuit Breaker + Retry + Bulkhead | ✅ v0.7.0 |
+| WebSocket / SSE / gRPC (incl. streaming) | ✅ v0.8.2 |
+| Circuit Breaker + Retry + Bulkhead + HTTP admin | ✅ v0.8.0 |
+| Cross-pod circuit breaker (Redis / Drizzle) | ✅ v0.8.1 |
+| Feature flags (canary / A/B testing) | ✅ v0.8.0 |
 | REPL with `.services` / `.routes` / `.modules` | ✅ v0.7.4 |
 | OpenAPI 3.1 + Scalar UI | ✅ v0.4 |
 | Prometheus metrics / OpenTelemetry tracing | ✅ v0.4 |
@@ -54,8 +57,8 @@ bun run dev
 
 ## 🏗 Status
 
-**v0.7.9** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
-closed. 31 packages, 67 smoke tests, 210+ unit tests.
+**v0.8.3** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
+closed. 32 packages, 69 smoke tests, 314+ unit tests.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
 
