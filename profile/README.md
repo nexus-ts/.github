@@ -5,7 +5,8 @@
 <h1 align="center">NexusTS</h1>
 
 <p align="center">
-  <strong>Bun-native fullstack framework</strong> — 32 modular packages under <code>@nexusts/*</code>.
+  <strong>Bun-native fullstack framework</strong> — NestJS structure × Adonis productivity × Hono edge performance × TC39 standard ES decorators.
+  32 modular packages under <code>@nexusts/*</code>.
   Ship only what you import. Zero overhead for what you don't.
 </p>
 
@@ -33,7 +34,7 @@ bun run dev
 ## 📦 Architecture
 
 ```
-@nexusts/core      → MVC + DI + routing + validation + view
+@nexusts/core      → MVC + DI + routing + validation + view + standard decorators
 @nexusts/cli       → `nx` CLI (scaffold, generate, seed, repl)
 @nexusts/drizzle   → Default ORM (5 dialects: postgres/mysql/sqlite/bun-sqlite/d1)
 @nexusts/auth      → better-auth integration
@@ -50,6 +51,8 @@ bun run dev
 
 | Feature | Status |
 |---------|--------|
+| **TC39 standard ES decorators** (no experimentalDecorators, no reflect-metadata) | ✅ **v0.9.0** |
+| Field injection (`@Inject(Token) declare field: Type`) | ✅ **v0.9.0** |
 | HTTP + DI + Validation | ✅ Core |
 | Exception Filters / Interceptors / Guards | ✅ v0.7.3 |
 | Lifecycle Hooks (`OnModuleInit`, etc.) | ✅ v0.7.3 |
@@ -69,26 +72,27 @@ bun run dev
 - 🌐 **Website**: [nexus-ts.github.io/nexusts](https://nexus-ts.github.io/nexusts/)
 - 📦 **Repository**: [nexus-ts/nexusts](https://github.com/nexus-ts/nexusts)
 - [User Guide](https://github.com/nexus-ts/nexusts/tree/main/docs/user-guide)
-- [API Reference](https://github.com/nexus-ts/nexusts/blob/main/docs/api-reference.md)
+- [Standard Decorator Migration Guide](https://github.com/nexus-ts/nexusts/blob/main/docs/design/standard-decorators-migration.md)
 - [NestJS Comparison](https://github.com/nexus-ts/nexusts/blob/main/docs/analysis/nestjs-comparison.md)
 - [AdonisJS Comparison](https://github.com/nexus-ts/nexusts/blob/main/docs/analysis/adonisjs-comparison.md)
 - [Changelog](https://github.com/nexus-ts/nexusts/blob/main/CHANGELOG.md)
 
 ## 🏗 Status
 
-**v0.8.4** — Active development. All Tier 1 & 2 gaps from NestJS/AdonisJS
-closed. 32 packages, 69 smoke tests, 314+ unit tests.
+**v0.9.0** — Standard decorator migration complete. TC39 standard ES
+decorators, no reflect-metadata required. 32 packages, 323+ tests,
+dual-mode backward compatibility with legacy decorators.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
 
 ## 🤝 Contributing
 
 PRs welcome! See the [`AGENTS.md`](https://github.com/nexus-ts/nexusts/blob/main/AGENTS.md)
-for module-author guidelines, decorator conventions, and the 7-step
-module addition workflow.
+for module-author guidelines, standard decorator conventions, and the
+7-step module addition workflow.
 
 ---
 
 <p align="center">
-  <sub>Built with Bun · TypeScript · Hono · Drizzle · reflect-metadata</sub>
+  <sub>Built with Bun · TypeScript · Hono · Drizzle · TC39 standard decorators</sub>
 </p>
