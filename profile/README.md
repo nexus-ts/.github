@@ -1,7 +1,23 @@
-# NexusTS
+<p align="center">
+  <img src="https://nexus-ts.github.io/nexusts/logo.svg" alt="NexusTS" width="400">
+</p>
 
-**Bun-native fullstack framework** — 32 modular packages under `@nexusts/*`.
-Ship only what you import. Zero overhead for what you don't.
+<h1 align="center">NexusTS</h1>
+
+<p align="center">
+  <strong>Bun-native fullstack framework</strong> — 32 modular packages under <code>@nexusts/*</code>.
+  Ship only what you import. Zero overhead for what you don't.
+</p>
+
+<p align="center">
+  <a href="https://nexus-ts.github.io/nexusts/">🌐 Website</a>
+  ·
+  <a href="https://github.com/nexus-ts/nexusts">📦 Repository</a>
+  ·
+  <a href="https://github.com/nexus-ts/nexusts/blob/main/docs/user-guide">📚 Documentation</a>
+  ·
+  <a href="https://github.com/nexus-ts/nexusts/blob/main/CHANGELOG.md">📝 Changelog</a>
+</p>
 
 ---
 
@@ -48,12 +64,15 @@ bun run dev
 | Prometheus metrics / OpenTelemetry tracing | ✅ v0.4 |
 | Inertia.js v3 (React / Vue) adapter + SSR scaffold | ✅ v0.8.4 |
 
-## 📚 Docs
+## 📚 Docs & Links
 
+- 🌐 **Website**: [nexus-ts.github.io/nexusts](https://nexus-ts.github.io/nexusts/)
+- 📦 **Repository**: [nexus-ts/nexusts](https://github.com/nexus-ts/nexusts)
 - [User Guide](https://github.com/nexus-ts/nexusts/tree/main/docs/user-guide)
 - [API Reference](https://github.com/nexus-ts/nexusts/blob/main/docs/api-reference.md)
 - [NestJS Comparison](https://github.com/nexus-ts/nexusts/blob/main/docs/analysis/nestjs-comparison.md)
 - [AdonisJS Comparison](https://github.com/nexus-ts/nexusts/blob/main/docs/analysis/adonisjs-comparison.md)
+- [Changelog](https://github.com/nexus-ts/nexusts/blob/main/CHANGELOG.md)
 
 ## 🏗 Status
 
