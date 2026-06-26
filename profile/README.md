@@ -69,6 +69,9 @@ bun run dev
 | Inertia.js v3 (React / Vue) adapter + SSR scaffold | ✅ v0.8.4 |
 | Kysely typed SQL query builder (KyselyService, KyselyRepository, KyselyModule) | ✅ **v0.9.5** |
 | CLI Kysely scaffold (make:crud, make:model, make:migration, db:generate, db:migrate) | ✅ **v0.9.5** |
+| Inline Reflect Metadata polyfill (no npm package needed) | ✅ **v0.9.6** |
+| WebSocket decorators dual-mode (standard + legacy) | ✅ **v0.9.6** |
+| SSE onAbort() alias + decorator example | ✅ **v0.9.6** |
 
 ## 📚 Docs & Links
 
@@ -82,9 +85,9 @@ bun run dev
 
 ## 🏗 Status
 
-**v0.9.5** — Kysely first-party module. TC39 standard ES
-decorators, no reflect-metadata required. 33 packages, 350+ tests,
-dual-mode backward compatibility with legacy decorators.
+**v0.9.6** — Reflect polyfill + SSE/WS fixes. Inline Reflect Metadata
+polyfill (no npm package needed). WebSocket decorators dual-mode.
+33 packages, 350+ tests, dual-mode backward compatibility.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
 
