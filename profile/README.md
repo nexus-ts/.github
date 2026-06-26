@@ -37,7 +37,7 @@ bun run dev
 @nexusts/core      → MVC + DI + routing + validation + view + standard decorators
 @nexusts/cli       → `nx` CLI (scaffold, generate, seed, repl)
 @nexusts/drizzle   → Default ORM (5 dialects: postgres/mysql/sqlite/bun-sqlite/d1)
-@nexusts/kysely    → Typed SQL query builder + Lucid-style repository (KyselyService, KyselyModule, KyselyRepository, built-in Migrator)
+@nexusts/kysely    → Typed SQL query builder + Lucid-style repository
 @nexusts/auth      → better-auth integration
 @nexusts/logger    → Pino-backed structured logging
 @nexusts/graphql   → SDL-first + code-first (`autoSchema: true`)
@@ -45,21 +45,40 @@ bun run dev
 @nexusts/feature-flag → Canary deployments & A/B testing
 @nexusts/cache     → Application cache (memory / Drizzle / Redis)
 @nexusts/schedule  → Cron / Interval / Timeout (in-tree parser, zero deps)
-... and 24 more →
+@nexusts/grpc      → gRPC unary + server/client/bidi streaming
+@nexusts/health    → Liveness / Readiness / Startup probes (K8s-ready)
+@nexusts/limiter   → Rate limiting (sliding-window / fixed-window / token-bucket)
+@nexusts/metrics   → Prometheus counters / gauges / histograms / summaries
+@nexusts/openapi   → OpenAPI 3.1 spec + Scalar UI
+@nexusts/tracing   → OpenTelemetry distributed tracing
+@nexusts/upload    → Multipart file upload with validation
+@nexusts/shield    → CSRF, CORS, HSTS, CSP security middleware
+@nexusts/static    → Static file serving (ETag, Range, MIME)
+@nexusts/session   → Cookie / Redis / Cloudflare KV session storage
+@nexusts/sse       → Server-Sent Events
+@nexusts/ws        → WebSocket gateway + rooms + broadcast
+@nexusts/view      → Rendu / Edge / Eta template engines + Inertia.js v3
+@nexusts/config    → Zod-validated configuration with layered loading
 ```
 
 ## ✨ Key features
 
 | Feature | Status |
 |---------|--------|
-| **TC39 standard ES decorators** (no experimentalDecorators, no reflect-metadata) | ✅ **v0.9.0** |
-| Field injection (`@Inject(Token) declare field: Type`) | ✅ **v0.9.0** |
+| **All decorators dual-mode** (TC39 standard + legacy) | ✅ **v0.9.7** |
+| **DI container — field injection** (`@Inject(Token) declare field`) | ✅ **v0.9.7** |
+| **Core `@Inject`/`@Injectable` standard-mode export fix** | ✅ **v0.9.7** |
+| 18 modules: @Cacheable, @OnEvent, @RateLimit, @Cron, @Trace, @GrpcMethod, etc. | ✅ **v0.9.7** |
+| 15 modules migrated to standard DI patterns (constructor → field injection) | ✅ **v0.9.7** |
+| gRPC streaming (server/client/bidi) | ✅ **v0.9.7** |
+| gRPC tests re-enabled (13 tests) | ✅ **v0.9.7** |
+| TC39 standard ES decorators (no experimentalDecorators, no reflect-metadata) | ✅ **v0.9.0** |
 | HTTP + DI + Validation | ✅ Core |
 | Exception Filters / Interceptors / Guards | ✅ v0.7.3 |
 | Lifecycle Hooks (`OnModuleInit`, etc.) | ✅ v0.7.3 |
 | Request-scoped DI | ✅ v0.4 |
 | GraphQL (SDL + code-first) | ✅ v0.7.7 |
-| WebSocket / SSE / gRPC (incl. streaming) | ✅ v0.8.2 |
+| WebSocket / SSE | ✅ v0.8.2 |
 | Circuit Breaker + Retry + Bulkhead + HTTP admin | ✅ v0.8.0 |
 | Cross-pod circuit breaker (Redis / Drizzle) | ✅ v0.8.1 |
 | Feature flags (canary / A/B testing) | ✅ v0.8.0 |
@@ -67,11 +86,10 @@ bun run dev
 | OpenAPI 3.1 + Scalar UI | ✅ v0.4 |
 | Prometheus metrics / OpenTelemetry tracing | ✅ v0.4 |
 | Inertia.js v3 (React / Vue) adapter + SSR scaffold | ✅ v0.8.4 |
-| Kysely typed SQL query builder (KyselyService, KyselyRepository, KyselyModule) | ✅ **v0.9.5** |
-| CLI Kysely scaffold (make:crud, make:model, make:migration, db:generate, db:migrate) | ✅ **v0.9.5** |
-| Inline Reflect Metadata polyfill (no npm package needed) | ✅ **v0.9.6** |
-| WebSocket decorators dual-mode (standard + legacy) | ✅ **v0.9.6** |
-| SSE onAbort() alias + decorator example | ✅ **v0.9.6** |
+| Kysely typed SQL query builder | ✅ v0.9.5 |
+| CLI Kysely scaffold | ✅ v0.9.5 |
+| Inline Reflect Metadata polyfill (no npm package needed) | ✅ v0.9.6 |
+| WebSocket / SSE decorators dual-mode | ✅ v0.9.6 |
 
 ## 📚 Docs & Links
 
@@ -85,9 +103,12 @@ bun run dev
 
 ## 🏗 Status
 
-**v0.9.6** — Reflect polyfill + SSE/WS fixes. Inline Reflect Metadata
-polyfill (no npm package needed). WebSocket decorators dual-mode.
-33 packages, 350+ tests, dual-mode backward compatibility.
+**v0.9.7** — Standard Decorator Migration Complete. Every decorator in
+the framework now supports dual-mode (TC39 standard + legacy). Core
+`@Inject`/`@Injectable` export fixed for standard decorator field injection.
+18 modules converted to dual-mode decorators. 15 modules migrated from
+constructor injection to field injection. gRPC tests re-enabled.
+348 tests, 22 integration test files.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
 
