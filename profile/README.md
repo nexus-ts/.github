@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Bun-native fullstack framework</strong> — NestJS structure × Adonis productivity × Hono edge performance × TC39 standard ES decorators.
-  32 modular packages under <code>@nexusts/*</code>.
+  33 modular packages under <code>@nexusts/*</code>.
   Ship only what you import. Zero overhead for what you don't.
 </p>
 
@@ -37,6 +37,7 @@ bun run dev
 @nexusts/core      → MVC + DI + routing + validation + view + standard decorators
 @nexusts/cli       → `nx` CLI (scaffold, generate, seed, repl)
 @nexusts/drizzle   → Default ORM (5 dialects: postgres/mysql/sqlite/bun-sqlite/d1)
+@nexusts/kysely    → Typed SQL query builder + Lucid-style repository (KyselyService, KyselyModule, KyselyRepository, built-in Migrator)
 @nexusts/auth      → better-auth integration
 @nexusts/logger    → Pino-backed structured logging
 @nexusts/graphql   → SDL-first + code-first (`autoSchema: true`)
@@ -44,7 +45,7 @@ bun run dev
 @nexusts/feature-flag → Canary deployments & A/B testing
 @nexusts/cache     → Application cache (memory / Drizzle / Redis)
 @nexusts/schedule  → Cron / Interval / Timeout (in-tree parser, zero deps)
-... and 23 more →
+... and 24 more →
 ```
 
 ## ✨ Key features
@@ -66,6 +67,8 @@ bun run dev
 | OpenAPI 3.1 + Scalar UI | ✅ v0.4 |
 | Prometheus metrics / OpenTelemetry tracing | ✅ v0.4 |
 | Inertia.js v3 (React / Vue) adapter + SSR scaffold | ✅ v0.8.4 |
+| Kysely typed SQL query builder (KyselyService, KyselyRepository, KyselyModule) | ✅ **v0.9.5** |
+| CLI Kysely scaffold (make:crud, make:model, make:migration, db:generate, db:migrate) | ✅ **v0.9.5** |
 
 ## 📚 Docs & Links
 
@@ -79,8 +82,8 @@ bun run dev
 
 ## 🏗 Status
 
-**v0.9.0** — Standard decorator migration complete. TC39 standard ES
-decorators, no reflect-metadata required. 32 packages, 323+ tests,
+**v0.9.5** — Kysely first-party module. TC39 standard ES
+decorators, no reflect-metadata required. 33 packages, 350+ tests,
 dual-mode backward compatibility with legacy decorators.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
