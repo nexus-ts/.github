@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Bun-native fullstack framework</strong> — NestJS structure × Adonis productivity × Hono edge performance × TC39 standard ES decorators.
-  33 modular packages under <code>@nexusts/*</code>.
+  31 modular packages under <code>@nexusts/*</code>.
   Ship only what you import. Zero overhead for what you don't.
 </p>
 
@@ -25,7 +25,7 @@
 ## 🚀 Quick start
 
 ```bash
-npm create nexusts@latest my-app
+bun create nexusts@latest my-app
 cd my-app
 bun install
 bun run dev
@@ -36,7 +36,7 @@ bun run dev
 ```
 @nexusts/core      → MVC + DI + routing + validation + view + standard decorators
 @nexusts/cli       → `nx` CLI (scaffold, generate, seed, repl)
-@nexusts/drizzle   → Default ORM (5 dialects: postgres/mysql/sqlite/bun-sqlite/d1)
+@nexusts/drizzle   → Default ORM (5 dialects: postgres/mysql/sqlite/d1)
 @nexusts/kysely    → Typed SQL query builder + Lucid-style repository
 @nexusts/auth      → better-auth integration
 @nexusts/logger    → Pino-backed structured logging
@@ -65,13 +65,15 @@ bun run dev
 
 | Feature | Status |
 |---------|--------|
+| **Bun-native runtime** (Bun + Cloudflare Workers only) | ✅ **v0.9.9** |
+| **Test runner: vitest → bun test** | ✅ **v0.9.9** |
+| **experimentalDecorators removed** from root tsconfig | ✅ **v0.9.9** |
+| **emitDecoratorMetadata removed** from all configs | ✅ **v0.9.9** |
+| **GraphQL dual-mode** (@Resolver/@Query/@Mutation standard + legacy) | ✅ **v0.9.9** |
 | **All decorators dual-mode** (TC39 standard + legacy) | ✅ **v0.9.7** |
 | **DI container — field injection** (`@Inject(Token) declare field`) | ✅ **v0.9.7** |
-| **Core `@Inject`/`@Injectable` standard-mode export fix** | ✅ **v0.9.7** |
 | 18 modules: @Cacheable, @OnEvent, @RateLimit, @Cron, @Trace, @GrpcMethod, etc. | ✅ **v0.9.7** |
-| 15 modules migrated to standard DI patterns (constructor → field injection) | ✅ **v0.9.7** |
 | gRPC streaming (server/client/bidi) | ✅ **v0.9.7** |
-| gRPC tests re-enabled (13 tests) | ✅ **v0.9.7** |
 | TC39 standard ES decorators (no experimentalDecorators, no reflect-metadata) | ✅ **v0.9.0** |
 | HTTP + DI + Validation | ✅ Core |
 | Exception Filters / Interceptors / Guards | ✅ v0.7.3 |
@@ -96,19 +98,17 @@ bun run dev
 - 🌐 **Website**: [nexus-ts.github.io/nexusts](https://nexus-ts.github.io/nexusts/)
 - 📦 **Repository**: [nexus-ts/nexusts](https://github.com/nexus-ts/nexusts)
 - [User Guide](https://github.com/nexus-ts/nexusts/tree/main/docs/user-guide)
-- [Standard Decorator Migration Guide](https://github.com/nexus-ts/nexusts/blob/main/docs/design/standard-decorators-migration.md)
 - [NestJS Comparison](https://github.com/nexus-ts/nexusts/blob/main/docs/analysis/nestjs-comparison.md)
 - [AdonisJS Comparison](https://github.com/nexus-ts/nexusts/blob/main/docs/analysis/adonisjs-comparison.md)
 - [Changelog](https://github.com/nexus-ts/nexusts/blob/main/CHANGELOG.md)
 
 ## 🏗 Status
 
-**v0.9.7** — Standard Decorator Migration Complete. Every decorator in
-the framework now supports dual-mode (TC39 standard + legacy). Core
-`@Inject`/`@Injectable` export fixed for standard decorator field injection.
-18 modules converted to dual-mode decorators. 15 modules migrated from
-constructor injection to field injection. gRPC tests re-enabled.
-348 tests, 22 integration test files.
+**v0.9.10** — Bun-Native Standardization Complete. Test runner migrated
+from vitest to `bun test`. `experimentalDecorators` and
+`emitDecoratorMetadata` removed from all configs. Runtime support
+narrowed to Bun + Cloudflare Workers. GraphQL decorators support
+standard mode. 862+ tests, 31 packages, all passing with `bun test`.
 
 > **v1.0 target**: Production-ready LTS with semver guarantees.
 
